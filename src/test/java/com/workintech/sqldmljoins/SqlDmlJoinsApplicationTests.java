@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -93,6 +94,6 @@ class SqlDmlJoinsApplicationTests {
 	@DisplayName("Tüm kitapların ortalama puanını bulunuz.")
 	@Test
 	void findAvgPointOfBooksTest(){
-		assertEquals(String.format("%.2f", kitapRepository.findAvgPointOfBooks()), "19.42");
+		assertEquals(String.format("%.2f", kitapRepository.findAvgPointOfBooks()), "19,42");
 	}
 }
